@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "roblox-mcp"
+version = "0.1.0"
+description = "MCP server that lets AI agents inspect and edit a live Roblox Studio place"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "sdhzcxnb0" }]
+keywords = ["mcp", "roblox", "roblox-studio", "model-context-protocol", "llm", "luau"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Software Development :: User Interfaces",
+]
+dependencies = ["mcp>=2.0"]
+
+[project.scripts]
+roblox-mcp = "roblox_mcp.server:main"
+
+[project.urls]
+Homepage = "https://github.com/sdhzcxnb0/Roblox-MCP"
+
+[tool.hatch.build.targets.wheel]
+packages = ["roblox_mcp"]
